@@ -24,10 +24,14 @@ resource "kubernetes_secret" "strapi_backend_secret" {
   }
 
   data = {
-    DASHBOARD_URL    = "https://${var.dashboard_domain}"
-    DATABASE_URL     = var.database_url
-    STRAPI_API_URL   = "https://${var.api_domain}"
-    ADMIN_JWT_SECRET = var.strapi_dashboard_jwt_secret
+    DASHBOARD_URL     = "https://${var.dashboard_domain}"
+    DATABASE_URL      = var.database_url
+    STRAPI_API_URL    = "https://${var.api_domain}"
+    ADMIN_JWT_SECRET  = var.strapi_dashboard_jwt_secret
+    AWS_ACCESS_KEY_ID = var.aws_access_key_id
+    AWS_ACCESS_SECRET = var.aws_access_secret
+    AWS_ENDPOINT      = var.aws_endpoint
+    AWS_BUCKET        = var.aws_bucket
   }
 
   lifecycle {

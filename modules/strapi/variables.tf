@@ -46,3 +46,25 @@ variable "strapi_dashboard_jwt_secret" {
   description = "This secret is needed to sign JWT tokens. Set it to a random value"
   type        = string
 }
+
+variable "aws_access_key_id" {
+  description = "s3 bucket images key id"
+  type        = string
+}
+
+variable "aws_access_secret" {
+  description = "s3 bucket access secret"
+  type        = string
+}
+
+variable "aws_endpoint" {
+  description = "s3 bucket endpoint url"
+  type        = string
+}
+
+variable "aws_bucket" {
+  description = "s3 bucket name"
+  type        = string
+}
+
+
